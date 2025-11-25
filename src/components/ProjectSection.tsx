@@ -60,7 +60,7 @@ export const ProjectSection = () => {
                         <h3 className="text-l font-semibold mb-1">
                             {project.title}
                         </h3>
-                        <h3 className="text-muted-foreground text-sm">
+                        <h3 className="text-muted-foreground text-lg">
                             {project.description}
                         </h3>
                     </div>
