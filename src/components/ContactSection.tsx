@@ -57,7 +57,7 @@ export const ContactSection = () => {
                         Contact Information
                     </h3>
                     <div className="space-y-6 justify-center">
-                        <div className="flex items-start space-x-4">
+                        <div className="flex items-center space-x-4">
                             <div className="p-3 rounded-full bg-primary/10">
                                 <Mail className="h-6 w-6 text-primary"/>
                             </div>
@@ -69,11 +69,11 @@ export const ContactSection = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex items-start space-x-4">
+                        <div className="flex ">
                             <div className="p-3 rounded-full bg-primary/10">
                                 <Phone className="h-6 w-6 text-primary"/>
                             </div>
-                            <div>
+                            <div className="justify-center">
                                 <h4 className="font-medium">Phone</h4>
                                 <a href="tel:+14377762607" 
                                 className="text-muted-foreground hover:text-primary transiction-colors">
@@ -81,7 +81,7 @@ export const ContactSection = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex items-start space-x-4">
+                        <div className="flex items-center space-x-4">
                             <div className="p-3 rounded-full bg-primary/10">
                                 <MapPin className="h-6 w-6 text-primary"/>
                             </div>

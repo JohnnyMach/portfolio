@@ -31,8 +31,8 @@ export const ThemeSwitch = () => {
             onClick={toggleTheme}
             aria-label="Toggle theme"
             className={cn(
-                "relative flex items-center w-20 h-10 rounded-full",
-                "bg-muted transition-colors duration-300"
+                "relative flex items-center w-20 h-10 p-3 rounded-full",
+                "bg-primary/30 transition-colors duration-300"
             )}
         >
             {/* Slider */}

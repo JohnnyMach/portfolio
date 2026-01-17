@@ -105,6 +105,8 @@ export const NavBar = () => {
                             </a>
                         ))}
                     </div>
+
+                    <div className="py-3"/>
                     
 
                     {/* Theme Switch */}
