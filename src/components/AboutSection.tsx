@@ -9,7 +9,7 @@ export const AboutSection = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
-                <img className="rounded-full h-60 w-55 mx-auto" src="src\files\fotovisto-att.JPG" />
+                <img className="rounded-full h-60 w-55 mx-auto" src="/files/fotovisto-att.jpg" />
                     <h3 className="text-xl font-semibold"> Software engineer and aspiring Data Engineer</h3>
                     <p className="text-muted-foreground">
                         I'm a data-driven engineer with roots in software development, databases, and scalable systems. 
@@ -75,7 +75,7 @@ export const AboutSection = () => {
                             Get in touch
                         </a>
                         {""}
-                        <a href="src\files\JohnnyMachado_Resume.pdf" download="" 
+                        <a href="/files/JohnnyMachado_Resume.pdf" download="" 
                         className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 
                         transition-colors duration-300">
                             {""}

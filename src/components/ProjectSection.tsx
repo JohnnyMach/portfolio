@@ -6,7 +6,7 @@ const projects = [
         title: "Capstone Project",
         description: "Data Analysis of a Coffee Brand.",
         image: "/projects/capstoneProject.png",
-        tags: ["PowerBI, Excel, R"],
+        tags: ["PowerBI", "Excel", "R"],
         demoUrl: "#",
         githubUrl: "#"
     },
@@ -15,7 +15,7 @@ const projects = [
         title: "Calculator",
         description: "Quick project using React and CSS.",
         image: "/projects/calculator.png",
-        tags: ["React, CSS"],
+        tags: ["React", "CSS"],
         demoUrl: "#",
         githubUrl: "https://github.com/JohnnyMach/calculator.git"
     },
@@ -24,7 +24,7 @@ const projects = [
         title: "Portfolio",
         description: "My Portfolio page",
         image: "/projects/portfolio.png",
-        tags: ["React, Tailwind"],
+        tags: ["React", "Tailwind"],
         demoUrl: "#",
         githubUrl: "#"
     }

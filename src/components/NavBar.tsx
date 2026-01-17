@@ -2,6 +2,7 @@
 import { cn } from "@/lib/Utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ThemeSwitch } from "./ThemeSwitch";
 
 const navItems = [
     { name: "Home", href: "#hero" },
@@ -14,14 +15,33 @@ export const NavBar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    // Handle scroll: navbar style + close mobile menu
     useEffect(() => {
-        const handleScrolled = () => {
+        const handleScroll = () => {
             setIsScrolled(window.scrollY > 10);
+
+            // Close mobile menu if user scrolls
+            if (isMenuOpen) {
+                setIsMenuOpen(false);
+            }
         };
 
-        window.addEventListener("scroll", handleScrolled);
-        return () => window.removeEventListener("scroll", handleScrolled);
-    }, []);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [isMenuOpen]);
+
+    // Lock body scroll when mobile menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [isMenuOpen]);
 
     return (
         
@@ -64,13 +84,15 @@ export const NavBar = () => {
                 {/* Mobile Overlay */}
                 <div
                     className={cn(
-                        "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
-                        "transition-all duration-300 md:hidden",
+                        "fixed left-0 top-0 w-full h-dvh",
+                        "bg-background/95 backdrop-blur-md",
+                        "z-40 flex flex-col items-center justify-center",
+                        "transition-opacity duration-300 md:hidden",
                         isMenuOpen
                             ? "opacity-100 pointer-events-auto"
                             : "opacity-0 pointer-events-none"
                     )}
-                >
+                    >
                     <div className="flex flex-col space-y-8 text-xl">
                         {navItems.map((item, key) => (
                             <a
@@ -82,6 +104,12 @@ export const NavBar = () => {
                                 {item.name}
                             </a>
                         ))}
+                    </div>
+                    
+
+                    {/* Theme Switch */}
+                    <div className="flex flex-col items-center gap-3">
+                        <ThemeSwitch />
                     </div>
                 </div>
             </div>
