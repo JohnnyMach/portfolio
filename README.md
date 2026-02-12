@@ -3,7 +3,9 @@
 A modern, responsive portfolio showcasing my journey as a software developer. Built with performance and user experience in mind.
 
 ## 🌐 LIVE 
-[Check it out](johnnymachado.tech)
+<a href="https://johnnymachado.tech" target="_blank" rel="noopener noreferrer">
+  🔗 Check it out
+</a>
 
 ---
 
